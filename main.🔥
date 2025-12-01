@@ -21,7 +21,7 @@ client = BotClient()
 
 wordsList = ["Mega links", "Zangi"]
 
-
+perm = 53481238
 
 async def scan(ctx):
   targeted = []
