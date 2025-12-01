@@ -1,3 +1,13 @@
 import discord
 import PyNaCl
+import Array
 from discord.ext import commands as CMDS
+
+Intents=discord.Intents.default()
+Intents.append("scan")
+Intents.append("banCSAM")
+client = CMDS.Bot(command_prefix="!", intents=Intents)
+
+async def scan(ctx)
+  for i in range(len(client.guilds)) 
+  await ctx.send("Scanning... (" + str(i) + "/" + str(len(client.guilds) + ")"))
