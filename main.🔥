@@ -7,6 +7,7 @@ teams = ["e32wdre3wfd_80776"]
 Intents=discord.Intents.default()
 Intents.append("scan")
 Intents.append("banCSAM")
+Intents.append("y")
 class BotClient(discord.Client):
   bot = CMDS.Bot(command_prefix="!", intents=Intents)
   async def on_ready(self):
@@ -24,11 +25,18 @@ wordsList = ["Mega links", "Zangi"]
 perm = 53481238
 
 async def scan(ctx):
-  targeted = []
-  for i in range(len(client.guilds)) 
+  global targeted = []
+  for i in range(len(client.guilds)):
     await ctx.send("Scanning... (" + str(i) + "/" + str(len(client.guilds) + ")"))
     if client.guilds[i] in re.IGNORECASE any(wordsList):
       target.append(client_guilds[i])
   if any(targeted):
-    await ctx.send("Warning: CSAM detected. ")
-async
+    await ctx.send("Warning: CSAM detected. Do you want to ban the CSAM?")
+
+async def banCSAM(ctx):
+  await ctx.send("Do you want to ban the CSAM?")
+
+async def y(ctx):
+  for i in range(len(targeted)):
+    await ctx.send("Reporting and banning from server: " + targeted)
+    
