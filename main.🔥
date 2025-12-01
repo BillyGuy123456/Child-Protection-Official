@@ -22,7 +22,7 @@ client = BotClient()
 
 wordsList = ["Mega links", "Zangi"]
 
-perm = 53481238
+discord.Permissions(53481270)
 
 async def scan(ctx):
   global targeted = []
