@@ -1,6 +1,7 @@
 import discord
 import PyNaCl
 import Array
+import mysql.connector
 from discord.ext import commands as CMDS
 
 banCSAMCheck = False
@@ -22,7 +23,7 @@ class BotClient(discord.Client):
     return @bot.command
 client = BotClient()
 
-wordsList = ["Mega link", "Zangi", "Telegram", ]
+wordsList = ["Mega link", "Zangi", "Telegram"]
 
 discord.Permissions(53481270)
 
@@ -32,6 +33,12 @@ async def scan(ctx):
     await ctx.send("Scanning... (" + str(i) + "/" + str(len(client.guilds) + ")"))
     if client.guilds[i] in re.IGNORECASE any(wordsList):
       target.append(client_guilds[i])
+    else
+      SafeUsers = mysql.connector.connect(
+        host = "https"
+        name = client.guilds[i].user.name
+        DiscordID = client.guilds[i].user.id
+        
   if any(targeted):
     await ctx.send("Warning: CSAM detected. Do you want to ban the CSAM?")
     banCSAMCheck = True
