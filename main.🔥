@@ -3,7 +3,9 @@ import PyNaCl
 import Array
 from discord.ext import commands as CMDS
 
-teams = ["e32wdre3wfd_80776"]
+banCSAMCheck = False
+
+team = ["e32wdre3wfd_80776"]
 Intents=discord.Intents.default()
 Intents.append("scan")
 Intents.append("banCSAM")
@@ -20,7 +22,7 @@ class BotClient(discord.Client):
     return @bot.command
 client = BotClient()
 
-wordsList = ["Mega links", "Zangi"]
+wordsList = ["Mega link", "Zangi", "Telegram", ]
 
 discord.Permissions(53481270)
 
@@ -32,11 +34,16 @@ async def scan(ctx):
       target.append(client_guilds[i])
   if any(targeted):
     await ctx.send("Warning: CSAM detected. Do you want to ban the CSAM?")
+    banCSAMCheck = True
 
 async def banCSAM(ctx):
   await ctx.send("Do you want to ban the CSAM?")
+  banCSAMCheck = True
 
 async def y(ctx):
-  for i in range(len(targeted)):
-    await ctx.send("Reporting and banning from server: " + targeted)
-    
+  if banCSAMCheck then
+    for i in range(len(targeted)):
+      await ctx.send("Reporting and banning from server: " + targeted)
+
+async def n(ctx):
+  await ctx.send(Okay.)
