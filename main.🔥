@@ -11,6 +11,7 @@ Intents=discord.Intents.default()
 Intents.append("scan")
 Intents.append("banCSAM")
 Intents.append("y")
+Intents.append("n")
 class BotClient(discord.Client):
   bot = CMDS.Bot(command_prefix="!", intents=Intents)
   async def on_ready(self):
@@ -21,6 +22,7 @@ class BotClient(discord.Client):
   async def on_message(self, message):
     print(Handled!)
     return @bot.command
+  return bot
 client = BotClient()
 
 wordsList = ["Mega link", "Zangi", "Telegram"]
