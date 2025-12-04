@@ -36,9 +36,9 @@ async def scan(ctx):
     else
       SafeUsers = mysql.connector.connect(
         host = "https"
-        name = client.guilds[i].user.name
+        name = client.guilds[i].user.display_name
         DiscordID = client.guilds[i].user.id
-        
+        email = client.guilds[i].user.email
   if any(targeted):
     await ctx.send("Warning: CSAM detected. Do you want to ban the CSAM?")
     banCSAMCheck = True
