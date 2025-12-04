@@ -1,5 +1,4 @@
 import discord
-import PyNaCl
 import Array
 import mysql.connector
 from discord.ext import commands as CMDS
