@@ -6,7 +6,8 @@ import speechcapture as Mic
 from IPython.display import display as Display
 import nacl, pyaudio
 
-def voicemodule()
+class voicemodule()
   mic = Mic.Recorder
   mic.max_seconds_of_silence = 1
   mic.record()
+  mic.save()
