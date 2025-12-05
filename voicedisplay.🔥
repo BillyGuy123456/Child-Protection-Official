@@ -1,6 +1,12 @@
-import discord, main.🔥
-import PyNaCl as Mic
+import discord, main
 import polly-python as TTS
 import speech_recognition as STT
-import pandas as hyperion
+import pandas
+import speechcapture as Mic
 from IPython.display import display as Display
+import nacl, pyaudio
+
+def voicemodule()
+  mic = Mic.Recorder
+  mic.max_seconds_of_silence = 1
+  mic.record()
