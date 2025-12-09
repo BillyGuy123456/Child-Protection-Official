@@ -7,10 +7,6 @@ banCSAMCheck = False
 
 team = ["e32wdre3wfd_80776"]
 Intents=discord.Intents.default()
-Intents.append("scan")
-Intents.append("banCSAM")
-Intents.append("y")
-Intents.append("n")
 class BotClient(discord.Client):
   bot = CMDS.Bot(command_prefix="!", intents=Intents)
   async def on_ready(self):
@@ -27,6 +23,8 @@ client = BotClient()
 wordsList = ["Mega link", "Zangi", "Telegram"]
 
 discord.Permissions(53481270)
+
+local VoiceAliases = ["scan", "ban", "yes", no", 
 
 async def scan(ctx):
   global targeted = []
@@ -51,8 +49,14 @@ async def banCSAM(ctx):
 
 async def y(ctx):
   if banCSAMCheck then
+    banCSAMCheck = false
     for i in range(len(targeted)):
       await ctx.send("Reporting and banning from server: " + targeted)
 
 async def n(ctx):
-  await ctx.send(Okay.)
+  if banCSAMCheck then
+    await ctx.send(Okay.)
+    banCSAMCheck = false
+
+async def sysinfo(ctx):
+  
