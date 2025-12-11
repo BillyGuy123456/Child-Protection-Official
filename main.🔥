@@ -1,6 +1,7 @@
 import discord
 import Array
 import mysql.connector
+import nacl
 from discord.ext import commands as CMDS
 
 banCSAMCheck = False
@@ -16,7 +17,7 @@ class BotClient(discord.Client):
       print("🔴" + self.user + "is not authorized!!!!")
   async def on_message(self, message):
     print(Handled!)
-    return @bot.command
+    return @bot.commands(message)
   return bot
 client = BotClient()
 
@@ -24,7 +25,7 @@ wordsList = ["Mega link", "Zangi", "Telegram"]
 
 discord.Permissions(53481270)
 
-local VoiceAliases = ["scan", "ban", "yes", no", 
+local VoiceAliases = ["scan", "ban", "yes", no", "view system info"]
 
 async def scan(ctx):
   global targeted = []
@@ -51,7 +52,7 @@ async def y(ctx):
   if banCSAMCheck then
     banCSAMCheck = false
     for i in range(len(targeted)):
-      await ctx.send("Reporting and banning from server: " + targeted)
+      await ctx.send("Reporting and banning from server: " + targeted[i])  
 
 async def n(ctx):
   if banCSAMCheck then
@@ -60,3 +61,7 @@ async def n(ctx):
 
 async def sysinfo(ctx):
   
+
+class Transfer:
+  def __init__(encoder: nacl.Encoding._Encoder):
+    
