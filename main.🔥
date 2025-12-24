@@ -91,3 +91,6 @@ class Transfer:
       while sysinfoCheck:
         for i in len(sysinfocolors):
           pygame.draw.rect(surf, sysinfocolors[i], rect)
+
+    else:
+       return encoder
