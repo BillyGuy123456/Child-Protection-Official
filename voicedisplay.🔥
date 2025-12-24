@@ -2,12 +2,15 @@ import discord, main
 import polly-python as TTS
 import speech_recognition as STT
 import pandas
-import speechcapture as Mic
+import speechcapture as Recognition
 from IPython.display import display as Display
-import nacl, pyaudio
+import nacl
+import pygame as Display
+import pyaudio as Mic
 
-class voicemodule()
+class voicemodule(main.Transfer)
   mic = Mic.Recorder
   mic.max_seconds_of_silence = 1
   mic.record()
   mic.save()
+  
