@@ -1,8 +1,9 @@
 import discord
 import Array
 import mysql.connector
-import nacl
+import nacl, pyaudio, pygame
 from discord.ext import commands as CMDS
+
 
 banCSAMCheck = False
 
@@ -52,7 +53,7 @@ async def y(ctx):
   if banCSAMCheck then
     banCSAMCheck = false
     for i in range(len(targeted)):
-      await ctx.send("Reporting and banning from server: " + targeted[i])  
+      await ctx.send("Reporting and banning from server: " + str(targeted[i]))
 
 async def n(ctx):
   if banCSAMCheck then
@@ -60,8 +61,33 @@ async def n(ctx):
     banCSAMCheck = false
 
 async def sysinfo(ctx):
-  
+  sysinfoCheck = true
+  await ctx.send("Viewing system information.")
+
 
 class Transfer:
-  def __init__(encoder: nacl.Encoding._Encoder):
-    
+  def __init__(self, encoder: nacl.Encoding.Base32Encoder, display: pygame.display?, audio: pyaudio?):
+    if display:
+      surf = display.init()
+      rect_size = display.get_desktop_sizes()[1]
+      display.set_mode((0, 0), 0, 0, 0, 0)
+      rect = pygame.Rect(0, 0, rect_size[1], rect_size[2])
+      finecolors = [tuple(255, 255, 0, 100)]
+      targetedcolors = [tuple(255, 0, 0, 100), tuple(240, 0, 0, 100), tuple(225, 0, 0, 100)]
+      bancolors = [tuple(255, 191, 0, 100), tuple(205, 154, 0, 100)]
+      sysinfocolors = [tuple(127, 0, 255, 100)]
+      while targeted:
+        for i in len(targetedcolors):
+          pygame.draw.rect(surf, targetedcolors[i], rect)
+
+      while not targeted:
+        for i in len(finecolors):
+          pygame.draw.rect(surf, finecolors[i], rect)
+
+      while banCSAMCheck:
+        for i in len(bancolors):
+          pygame.draw.rect(surf, bancolors[i], rect)
+
+      while sysinfoCheck:
+        for i in len(sysinfocolors):
+          pygame.draw.rect(surf, sysinfocolors[i], rect)
