@@ -8,9 +8,11 @@ import nacl
 import pygame as Display
 import pyaudio as Mic
 
-class voicemodule(main.Transfer)
+class voicemodule(main.Transfer):
   mic = Mic.Recorder
   mic.max_seconds_of_silence = 1
-  mic.record()
-  mic.save()
+  def __init__:
+    mic.record()
+    mic.save()
+
   
