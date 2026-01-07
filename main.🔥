@@ -91,6 +91,9 @@ class Transfer:
       while sysinfoCheck:
         for i in len(sysinfocolors):
           pygame.draw.rect(surf, sysinfocolors[i], rect)
-
+    elif audio:
+      def send():
+         encoder.encode()
+         discord
     else:
-       return encoder
+      encoder.decode()
