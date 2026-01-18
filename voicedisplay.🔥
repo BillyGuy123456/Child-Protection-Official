@@ -7,12 +7,24 @@ from IPython.display import display as Display
 import nacl
 import pygame as Display
 import pyaudio as Mic
+import wave
+import sys
 
 class voicemodule(main.Transfer):
-  mic = Mic.Recorder
-  mic.max_seconds_of_silence = 1
   def __init__:
-    mic.record()
-    mic.save()
+    with wave.open("internalServer.wav", "wb") as audio:f:
+      p = pyaudio.PyAudio()
+      wf.setnchannels(CHANNELS)
+      wf.setsampwidth(p.get_sample_size(FORMAT))
+      wf.setframerate(RATE)
+      
 
-  
+      stream = p.open(format=FORMAT, channels=CHANNELS, rate=RATE, input=True)
+
+      print('Recording...')
+      for _ in range(0, RATE // CHUNK * RECORD_SECONDS):
+          wf.writeframes(stream.read(CHUNK))
+      print('Done')
+
+      stream.close()
+      p.terminate()
