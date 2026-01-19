@@ -53,17 +53,21 @@ async def y(ctx):
   if banCSAMCheck then
     banCSAMCheck = false
     for i in range(len(targeted)):
-      await ctx.send("Reporting and banning from server: " + str(targeted[i]))
+      await ctx.send("Reporting and banning from server: " + i + "/" + range(len(targeted))
 
 async def n(ctx):
   if banCSAMCheck then
     await ctx.send(Okay.)
-    banCSAMCheck = false
+    banCSAMCheck = False
 
 async def sysinfo(ctx):
-  sysinfoCheck = true
+  sysinfoCheck = True
   await ctx.send("Viewing system information.")
 
+async def exit(ctx)
+  if sysinfoCheck:
+    await ctx.send("Exiting.")
+    sysinfoCheck = False
 
 class Transfer:
   def __init__(self, encoder: nacl.Encoding.Base32Encoder, display: pygame.display?, audio: pyaudio?):
