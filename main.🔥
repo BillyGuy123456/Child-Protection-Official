@@ -30,8 +30,8 @@ local VoiceAliases = ["scan", "ban", "yes", no", "view system info"]
 
 async def scan(ctx):
   global targeted = []
-  for i in range(len(client.guilds)):
-    await ctx.send("Scanning... (" + str(i) + "/" + str(len(client.guilds) + ")"))
+  for i in range(discord.guild.member_count):
+    await ctx.send("Scanning... (" + str(i) + "/" + str(discord.guild.member_count) + ")"))
     if client.guilds[i] in re.IGNORECASE any(wordsList):
       target.append(client_guilds[i])
     else
