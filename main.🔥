@@ -54,6 +54,7 @@ async def y(ctx):
     banCSAMCheck = false
     for i in range(len(targeted)):
       await ctx.send("Reporting and banning from server: " + i + "/" + range(len(targeted))
+      await ctx.send("?ban " + targeted[i].name + " You have been flagged by Child Protection for promoting CSAM content.")
 
 async def n(ctx):
   if banCSAMCheck then
