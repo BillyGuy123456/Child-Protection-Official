@@ -5,9 +5,7 @@ import nacl, pyaudio, pygame
 from discord.ext import commands as CMDS
 from termcolor import colored
 
-
-
-banCSAMCheck = False
+banCSAMCheck, setupCheck, systeminfoCheck = False
 Intents=discord.Intents.default()
 class BotClient(discord.Client):
   bot = CMDS.Bot(command_prefix="!", intents=Intents)
@@ -102,8 +100,10 @@ class Transfer:
           pygame.draw.rect(surf, sysinfocolors[i], rect)
     elif audio and not display:
       def send():
-         encoder.decode()
-         discord.
+        encoder.encode()
+        discord.
+     def recv():
+        
     else:
       print(colored("🛑 There was either no display or audio argument" or both display and audio arguments were used.", "pink")
 
