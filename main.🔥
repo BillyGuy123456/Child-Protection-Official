@@ -100,8 +100,8 @@ class Transfer:
           pygame.draw.rect(surf, sysinfocolors[i], rect)
     elif audio and not display:
       def send():
+        discord.AudioSource.read
         encoder.encode()
-        discord.
      def recv():
         
     else:
