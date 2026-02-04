@@ -105,6 +105,6 @@ class Transfer:
      def recv():
         
     else:
-      print(colored("🛑 There was either no display or audio argument" or both display and audio arguments were used.", "pink")
+      print(colored("🛑 There was either no display or audio argument or both display and audio arguments were used.", "pink")
 
 bot.run("MTQ0NDQ1MDQxNzQ2NjU0NDMzMQ.G1tUDX.JIVl94UjDKufiA96XldxlqrbCkXl8INpdwFRKk")
