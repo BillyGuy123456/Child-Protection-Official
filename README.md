@@ -1,14 +1,8 @@
 # Child Protection
 This is for Discord as a whole. Please install this bot to your Discord server, or donate,  because Discord doesn't deserve CSAM content.
-<i>Repo metadata</i>
-
 <a href="https://github.com/BillyGuy123456/Child-Protection-Official/releases/"><img src="https://img.shields.io/github/tag/BillyGuy123456/Child-Protection-Official?include_prereleases=&sort=semver&color=red" alt="GitHub tag"></a>
 <a href="#license"><img src="https://img.shields.io/badge/License-MIT-red" alt="License"></a>
 <a href="https://github.com/BillyGuy123456/Child-Protection-Official/issues"><img src="https://img.shields.io/github/issues/BillyGuy123456/Child-Protection-Official" alt="issues - Child-Protection-Official"></a>
-
-<i>System dependencies</i>
-
-<i>Call-to-Action buttons</i>
 
 ## Features
 ### 🔥 Made with Mojo
