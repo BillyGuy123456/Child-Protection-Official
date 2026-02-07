@@ -22,7 +22,7 @@ client = BotClient()
 
 team = BotClient
 
-wordsList = ["Mega link", "Zangi", "Telegram"]
+wordsList = ["Mega link", "Zangi", "Telegram", "on my Signal"]
 
 discord.Permissions(53481270)
 
