@@ -15,4 +15,4 @@ If any are detected, you can ban them from your server!
 Automatically puts the non-CSAM advertisers into a SQL database, with their Discord display name, Discord ID, and Discord email!
 
 ## Donate
-[DONATE HERE](https://name909.wordpress.com/about/)
+[DONATE HERE](https://name909.wordpress.com/services/)
