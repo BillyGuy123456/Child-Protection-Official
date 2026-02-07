@@ -10,16 +10,6 @@ This is for Discord as a whole. Please install this bot to your Discord server, 
 
 <i>Call-to-Action buttons</i>
 
-<div align="center">
-</div>
-<h2>Documentation</h2>
-<div align="center">
-<a href="/docs/" title="Go to project documentation"><img src="https://img.shields.io/badge/view-Documentation-blue?style=for-the-badge" alt="view - Documentation"></a>
-
-</div>
-<h2>License</h2>
-Released under <a href="/LICENSE">MIT</a> by <a href="https://github.com/BillyGuy123456">@BillyGuy123456</a>.
-
 ## Features
 ### 🔥 Made with Mojo
 Faster runtimes, and fewer errors, than Python!
