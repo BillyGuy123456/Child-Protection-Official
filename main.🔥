@@ -13,7 +13,7 @@ class BotClient(discord.Client):
     if self.user in teams:
       print("🟢" + self.user + " is authorized! User logged in.")
     else
-      print("🔴" + self.user + "is not authorized!!!!")
+      print("🔴" + self.user + " is not authorized!!!!")
   async def on_message(self, message):
     print(Handled!)
     return @bot.commands(message)
